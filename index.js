@@ -31,43 +31,41 @@ setInterval(() => {
 }, 1800000) // post every 30 minutes
 console.log('Posted Stats!')
 
+function status() {
+  
+            let status = [
+              `IF YOU ARE STAYING SAFE AND WEARING A 😷`,
+              `${config.prefix}vote`,
+              `${client.guilds.cache.size} servers | ${config.prefix}help`
+            ];
+        
+            let statusR = Math.floor(Math.random() * status.length);
+            client.user.setActivity(status[statusR] , {type : "WATCHING" , status : "Online"});
+          }
+          setInterval(status, 7000);
+
+// const activities_list = [ 
+//     `${client.guilds.cache.size} servers`, 
+//     `${config.prefix}vote`,
+//     `${client.guilds.cache.size} servers | ${config.prefix}help`,
+//     `IF YOU ARE STAYING SAFE AND WEARING A 😷`
+//     ];
+
+ // setInterval(() => {
+    //     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+    //     client.user.setActivity(activities_list[index], { type: 'WATCHING' });
+    // }, 7000);
+
 client.on('ready', () => {
-  const activities_list = [ 
-    `${client.guilds.cache.size} servers`, 
-    `${config.prefix}help`,
-    `${config.prefix}vote`,
-    `${client.guilds.cache.size} servers | ${config.prefix}help`
-    ];
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        client.user.setActivity(activities_list[index], { type: 'WATCHING' });
-    }, 10000);
+    status();
 });
 
 client.on('guildDelete', guild => {
-  const activities_list1 = [ 
-    `${client.guilds.cache.size} servers`, 
-    `${config.prefix}help`,
-    `${config.prefix}vote`,
-    `${client.guilds.cache.size} servers | ${config.prefix}help`
-    ];
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list1.length - 1) + 1);
-        client.user.setActivity(activities_list1[index], { type: 'WATCHING' });
-    }, 10000);
+    status();
 });
 
 client.on('guildCreate', guild => {
-  const activities_list2 = [ 
-    `${client.guilds.cache.size} servers`, 
-    `${config.prefix}help`,
-    `${config.prefix}vote`,
-    `${client.guilds.cache.size} servers | ${config.prefix}help`
-    ];
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list2.length - 1) + 1);
-        client.user.setActivity(activities_list2[index], { type: 'WATCHING' });
-    }, 10000);
+  status();
 });
 
 

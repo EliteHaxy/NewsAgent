@@ -14,7 +14,7 @@ module.exports = {
           if(c) {
             message.channel.send(`Yay ${message.author.username}! You voted for me on top.gg in the past 12 hours! Go tell all your friends to vote as well!`)
           } else {
-            message.channel.send(`:o ${message.author.username} you haven't voted for me in the past 12 hours! Go vote for me now at https://top.gg/bot/803969494585180230`)
+            message.channel.send(`:o ${message.author.username} you haven't voted for me on top.gg in the past 12 hours! Go vote for me now at https://top.gg/bot/803969494585180230`)
           }
         });
       }

@@ -50,6 +50,7 @@ module.exports = {
         .addField('n!vote', 'Vote for the bot on top.gg. In the future we might add perks to this!')
         .addField('n!ping', `Show the bot's current ping.`)
         .addField('n!votecheck', `Checks if you have voted for News Agent on top.gg.`)
+        .addField('n!stats', 'Shows the total number of guilds and total number of members the bot is in.')
         .setTimestamp();
 
         const invite = new Discord.MessageEmbed()
