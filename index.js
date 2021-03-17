@@ -87,4 +87,4 @@ client.on('message', message => {
 	}
 });
 
-client.login(config.token); // Fixed
+client.login(config.token);
