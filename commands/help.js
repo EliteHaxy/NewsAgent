@@ -47,6 +47,7 @@ module.exports = {
         .addField(`n!help`, 'Shows this embed with all commands')
         .addField('n!info', `Shows information about the bot with the invite and vote links.`)
         .addField('n!invite', `Invite URL to invite this bot.`)
+        .addField('n!uptime', `Show bot's current uptime.`)
         .addField('n!vote', 'Vote for the bot on top.gg. In the future we might add perks to this!')
         .addField('n!ping', `Show the bot's current ping.`)
         .addField('n!votecheck', `Checks if you have voted for News Agent on top.gg.`)
