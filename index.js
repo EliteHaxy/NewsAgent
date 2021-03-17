@@ -3,7 +3,6 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.js');
-const keepAlive = require('./server.js');
 
 const Topgg = require('@top-gg/sdk')
 
@@ -21,6 +20,7 @@ for (const file of commandFiles) {
 client.once('ready', () => {
 	console.log('News Agent initialized.');
   setTimeout(() => {  console.log("Client completely initialized."); }, 500);
+  setTimeout(() => {  console.log("24/7 Hosting initialized."); }, 200);
 });
 
 setInterval(() => {
@@ -87,5 +87,4 @@ client.on('message', message => {
 	}
 });
 
-keepAlive();
 client.login(config.token);
